@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import GlobalStyle from './style/GlobalStyle';
+import styled from 'styled-components';
+import porckatBall2 from "./image/porckatBall2.png";
+
+const Gs = styled.div`
+  cursor: url(${porckatBall2}), auto;
+  height: 100%;
+`;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Gs>
+      <App />
+    </Gs>
   </React.StrictMode>
 );
 
