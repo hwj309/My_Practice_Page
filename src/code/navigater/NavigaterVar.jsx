@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import porckatBall1 from "../../image/porckatBall1.png";
-import porckatBall2 from "../../image/porckatBall2.png";
 
 
 const Nav = styled.nav`
