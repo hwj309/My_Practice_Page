@@ -8,10 +8,13 @@ const Nav = styled.nav`
 `;
 
 const NavUl = styled.ul`
-    
     align-items: center;
     color: white;
     height: 100%;
+
+    &:hover {
+        cursor: url(${porckatBall1}), auto;
+    }
 `;
 
 const NavUlLi = styled.li`
@@ -30,7 +33,7 @@ const NavUlLi = styled.li`
 
 function NavigaterVar(props) {
 
-    const chapters = ["chapter_01","chapter_02","chapter_03","chapter_04","chapter_05","chapter_06","chapter_07","chapter_08","chapter_09","chapter_10","chapter_11","chapter_12","chapter_13","chapter_14","chapter_15"]
+    const chapters = ["chapter_03","chapter_04","chapter_05","chapter_06","chapter_07","chapter_08","chapter_09","chapter_10","chapter_11","chapter_12","chapter_13","chapter_14","chapter_15"]
 
     return(
         <div>
@@ -39,7 +42,7 @@ function NavigaterVar(props) {
                     {
                         chapters.map((chapter, index) => {
                             return (
-                                <NavUlLi key={index}>{chapter}</NavUlLi>
+                                <NavUlLi key={index} onClick={() => props.loadPage(chapter)}>{chapter}</NavUlLi>
                             );
                             
                         })
